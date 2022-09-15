@@ -6,6 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set work directory
+RUN mkdir /code
 WORKDIR /code
 
 # Install dependencies
@@ -14,4 +15,4 @@ RUN pip install -r requirements.txt
 
 # Copy project
 COPY . /code/
-EXPOSE 80
+EXPOSE 8000
